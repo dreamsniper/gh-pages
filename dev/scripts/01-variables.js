@@ -27,4 +27,7 @@ var body,
     userChoice,
     userNamePrompt,
     headButton,
-    tailButton;
+    tailButton,
+    flipButton,
+    win,
+    lose;
