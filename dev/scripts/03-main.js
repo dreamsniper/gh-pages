@@ -48,7 +48,17 @@ retry.addEventListener('click', start, false);
 userNamePrompt = document.getElementById('username-prompt');
 headButton = document.getElementById('head-button');
 tailButton = document.getElementById('tail-button');
+flipButton = document.getElemetsById('flip-button');
+
 
 //add listeners
 headButton.addEventListener('click', selectHead, false);
 tailButton.addEventListener('click', selectTail, false);
+flipButton.addEventListener('click', flipCoin, false);
+
+
+if(userChoice){
+    win++;
+}else{
+    lose++;
+}
