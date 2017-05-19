@@ -143,3 +143,8 @@ function selectHead() {
 function selectTail() {
     userChoice = 'tail';
 }
+
+//produces a number 0 for head and 1 for tails
+function flipCoin(userChoice) {
+
+}
