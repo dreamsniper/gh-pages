@@ -1,0 +1,45 @@
+nav {
+    background-color: $italiana;
+    ul {
+        li {
+            display: inline-block;
+            padding: $grid-gutter / 2;
+            height: $grid-leading / 2;
+            line-height: $grid-gutter / 2;
+            a {
+                color: $rationale;
+            }
+            ul {
+                visibility: hidden;
+                display: none;
+                a {
+                    color: inherit;
+                }
+                li {
+                    a {
+                        display: inline-block;
+                    }
+                }
+            }
+            &:hover {
+                background-color: $blue-tangerine;
+                color: $wineColor;
+                a {
+                    color: inherit;
+                }
+                ul {
+                    visibility: visible;
+                    display: block;
+                    li {
+                        background-color: $blue-tangerine;
+                        position: absolute;
+                        &:hover {
+                            background-color: darken($blue-tangerine, 10%);
+                            color: $rationale;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

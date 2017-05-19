@@ -1,0 +1,60 @@
+body {
+    .start-button {
+        display: block;
+        margin: 0 auto;
+        span {
+            text-align: center;
+            display: block;
+            margin: 0 auto;
+            padding: 1rem;
+            width: 30%;
+            background-color: #ffffff;
+            border-radius: 3em;
+            border: 2px solid $rationale;
+            cursor: pointer;
+        }
+    }
+    .back-button {
+        span {
+            display: block;
+            margin: 0 auto;
+            clear: both;
+            text-align: center;
+            padding: 1rem;
+            width: 30%;
+            background-color: #ffffff;
+            border-radius: 3em;
+            border: 2px solid $italiana;
+            cursor: pointer;
+        }
+    }
+    .try-again {
+        display: block;
+        margin: 0 auto;
+    }
+    .buttons {
+        clear: both;
+        #head-button {
+            float: left;
+            margin: 1rem;
+            width: 40%;
+            button {
+                display: block;
+                margin: 0 auto;
+                width: 35%;
+                height: 35%;
+            }
+        }
+        #tail-button {
+            float: right;
+            margin: 1rem;
+            width: 40%;
+            button {
+                display: block;
+                margin: 0 auto;
+                width: 35%;
+                height: 35%;
+            }
+        }
+    }
+}

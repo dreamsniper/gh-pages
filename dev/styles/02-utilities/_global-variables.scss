@@ -1,0 +1,35 @@
+// =============================================================================
+// Font Sizes and Leading
+// =============================================================================
+$font-size-base: 16px;
+// =============================================================================
+// Grid Sizes
+// =============================================================================
+$grid-column: 3.75 * $font-size-base; // 60px
+$grid-gutter: $grid-column / 3; // 20px
+$grid-gutter-split: $grid-gutter / 2; // 10px
+$grid-gutter-full: $grid-column + $grid-gutter; // 80px
+$grid-leading: 1.5 * $font-size-base; // 24px
+// =============================================================================
+// Responsive Breakpoints
+// =============================================================================
+$width-small: 400px;
+$width-medium: 840px;
+$width-large: 1280px;
+// =============================================================================
+// Project-Specific Variables
+// =============================================================================
+$main-bg-color: #4bc6fe;
+$h1-color: #fff;
+$h2-color: #046D8B;
+//color scheme
+$grassGreen: #A9DA88;
+$yellowGreen: #F0FFC9;
+$jadeGreen: #62997A;
+$wineColor: #72243D;
+$redWood: #3B0819;
+$italiana: #2B4E72;
+$nova-slim: #94BA65;
+$pathway-gothic-one: #4E4D4A;
+$rationale: #FE8B05;
+$blue-tangerine: #0AABBA;
