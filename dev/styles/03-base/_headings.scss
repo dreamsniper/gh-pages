@@ -11,3 +11,11 @@ h2 {
     margin: $grid-gutter / 2;
     font-family: 'Ranchers', cursive;
 }
+
+h3 {
+    text-align: center;
+    color: $h1-color;
+    font-size: $font-size-base * 2;
+    margin: $grid-gutter / 2;
+    font-family: 'Ranchers', cursive;
+}
