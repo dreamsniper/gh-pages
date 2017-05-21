@@ -63,6 +63,14 @@ h2 {
   font-family: 'Ranchers', cursive;
 }
 
+h3 {
+  text-align: center;
+  color: #fff;
+  font-size: 32px;
+  margin: 10px;
+  font-family: 'Ranchers', cursive;
+}
+
 body .start-button {
   display: block;
   margin: 0 auto;
@@ -126,6 +134,32 @@ body .buttons #tail-button button {
   margin: 0 auto;
   width: 35%;
   height: 35%;
+}
+
+body .flip-menu {
+  display: none;
+  text-align: center;
+  background-color: #A9DA88;
+  margin: 1em auto;
+  padding: 1rem;
+}
+
+body .flip-menu #flip-button {
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+  padding: 1rem;
+  width: 30%;
+  background-color: #ffffff;
+  border-radius: 3em;
+  border: 2px solid #FE8B05;
+  cursor: pointer;
+}
+
+body .results {
+  display: block;
+  margin: 1em auto;
+  background-color: aqua;
 }
 
 nav {
