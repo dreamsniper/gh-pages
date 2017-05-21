@@ -23,7 +23,7 @@ accordionButtonDiv = document.querySelectorAll('h2 + div');
 allAccordionClosed = true;
 
 //add eventListeners to accordion buttons
-for (var eventL = 0; eventL < accordionButton.length; eventL += 1) {
+for (eventL = 0; eventL < accordionButton.length; eventL += 1) {
     accordionButton[eventL].addEventListener('click', toggle, false);
 }
 
@@ -48,17 +48,17 @@ retry.addEventListener('click', start, false);
 userNamePrompt = document.getElementById('username-prompt');
 headButton = document.getElementById('head-button');
 tailButton = document.getElementById('tail-button');
-flipButton = document.getElemetsById('flip-button');
+flipButton = document.getElementById('flip-button');
 
 
 //add listeners
 headButton.addEventListener('click', selectHead, false);
 tailButton.addEventListener('click', selectTail, false);
 flipButton.addEventListener('click', flipCoin, false);
+flipMenu = document.getElementsByClassName('flip-menu')[0];
 
-
-if(userChoice){
-    win++;
-}else{
-    lose++;
-}
+//coin animation
+coinAnimation = document.getElementsByClassName('coin-animation')[0];
+results = document.getElementsByClassName('results')[0];
+text = [];
+h2Element = document.createElement('h2');
