@@ -57,4 +57,29 @@ body {
             }
         }
     }
+    .flip-menu {
+        display: none;
+        text-align: center;
+        background-color: $grassGreen;
+        margin: 1em auto;
+        padding: 1rem;
+        #flip-button {
+            text-align: center;
+            display: block;
+            margin: 0 auto;
+            padding: 1rem;
+            width: 30%;
+            background-color: #ffffff;
+            border-radius: 3em;
+            border: 2px solid $rationale;
+            cursor: pointer;
+        }
+    }
+    .results {
+        display: block;
+        margin: 1em auto;
+        background-color: aqua;
+    }
+    #head-count {}
+    #tail-count {}
 }
