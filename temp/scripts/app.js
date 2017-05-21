@@ -3,6 +3,8 @@ var body,
     nav,
     script,
     html,
+    heads,
+    tails,
     accordionButton,
     accordionButtonDiv,
     index,
@@ -24,13 +26,19 @@ var body,
     endScreen,
     retry,
     user,
-    userChoice,
     userNamePrompt,
     headButton,
     tailButton,
     flipButton,
-    win,
-    lose;
+    coinAnimation,
+    side,
+    eventL,
+    flipMenu,
+    results,
+    headsCount,
+    text,
+    tailsCount,
+    h2Element;
 
 //define HeaderNav as function 
 function headerNav(navItems) {
@@ -84,6 +92,7 @@ function headerNav(navItems) {
     nav.innerHTML = ul;
 }
 
+//function to insert main img and coins to divs
 function insertImages() {
     'use strict';
 
@@ -155,6 +164,7 @@ function back() {
 
 //prompts user for a name
 function userName() {
+    'use strict';
     user = prompt('please enter your name');
 
     if (user === '') {
@@ -170,17 +180,78 @@ function userName() {
 
 //function to select heads
 function selectHead() {
-    userChoice = 'head';
+    'use strict';
+    //0 represents heads in random number
+    //userChoice = 0;
+
+    showFlipButtonHead();
 }
 
 //function to select tails
 function selectTail() {
-    userChoice = 'tail';
+    'use strict';
+    //1 represents tail in random number
+    //userChoice = 1;
+
+    showFlipButtonTail();
 }
 
-//produces a number 0 for head and 1 for tails
-function flipCoin(userChoice) {
+//produces a number between 1 and zro and animates a coin
+function flipCoin() {
+    'use strict';
+    heads = 0;
+    tails = 0;
 
+
+
+    //random number between 1 and zero
+    side = Math.round(Math.random());
+
+    //represents head
+    if (side === 0) {
+
+        showHeadAnimation();
+
+    } else {
+
+
+        showTailAnimation();
+    }
+}
+
+function showFlipButtonHead() {
+    //display flip menu
+    flipMenu.style.display = 'block';
+    h2Element.innerHTML = 'You Chose Heads!';
+    //display choice
+    flipMenu.appendChild(h2Element);
+}
+
+function showFlipButtonTail() {
+
+    //display flip menu
+    flipMenu.style.display = 'block';
+    h2Element.innerHTML = 'You Chose Tails!';
+    //display choice
+    flipMenu.appendChild(h2Element);
+}
+
+function showHeadAnimation() {
+    text[0] = '<img class="animate-coin" src="img/head-coin.png"/>';
+    coinAnimation.innerHTML = text[0];
+
+    heads += 1;
+    results.innerHTML = 'You got Heads';
+    headsCount.innerHTML = '<h1> Number of heads: ' + heads + '</h1>';
+}
+
+function showTailAnimation() {
+    text[1] = '<img class="animate-coin" src="img/tail-coin.png"/>';
+    coinAnimation.innerHTML = text[1];
+
+    tails += 1;
+    results.innerHTML = '<h3>You got Tails!</h3>';
+    tailsCount.innerHTML = '<h1> Number of heads: ' + heads + '</h1>';
 }
 
 //assign body
@@ -208,7 +279,7 @@ accordionButtonDiv = document.querySelectorAll('h2 + div');
 allAccordionClosed = true;
 
 //add eventListeners to accordion buttons
-for (var eventL = 0; eventL < accordionButton.length; eventL += 1) {
+for (eventL = 0; eventL < accordionButton.length; eventL += 1) {
     accordionButton[eventL].addEventListener('click', toggle, false);
 }
 
@@ -233,17 +304,17 @@ retry.addEventListener('click', start, false);
 userNamePrompt = document.getElementById('username-prompt');
 headButton = document.getElementById('head-button');
 tailButton = document.getElementById('tail-button');
-flipButton = document.getElemetsById('flip-button');
+flipButton = document.getElementById('flip-button');
 
 
 //add listeners
 headButton.addEventListener('click', selectHead, false);
 tailButton.addEventListener('click', selectTail, false);
 flipButton.addEventListener('click', flipCoin, false);
+flipMenu = document.getElementsByClassName('flip-menu')[0];
 
-
-if(userChoice){
-    win++;
-}else{
-    lose++;
-}
+//coin animation
+coinAnimation = document.getElementsByClassName('coin-animation')[0];
+results = document.getElementsByClassName('results')[0];
+text = [];
+h2Element = document.createElement('h2');
