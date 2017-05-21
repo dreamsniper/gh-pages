@@ -1,3 +1,4 @@
+//to style accordion button
 #accordion {
     padding: $grid-gutter/2;
     h2 {
@@ -41,6 +42,7 @@
     }
 }
 
+//styling for the welcome screen
 .welcome-screen {
     display: block;
     #coin {
@@ -56,6 +58,7 @@
     }
 }
 
+//To style the game screen
 .game-screen {
     display: none;
     #head-coin {
@@ -66,9 +69,9 @@
         height: 50%;
         img {
             display: block;
-margin: 0 auto;
-width: 35%;
-height: 35%;
+            margin: 0 auto;
+            width: 35%;
+            height: 35%;
         }
     }
     #tail-coin {
@@ -86,6 +89,7 @@ height: 35%;
     }
 }
 
+//To style the end screen
 .end-screen {
     display: none;
 }
