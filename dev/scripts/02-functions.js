@@ -50,6 +50,7 @@ function headerNav(navItems) {
     nav.innerHTML = ul;
 }
 
+//function to insert main img and coins to divs
 function insertImages() {
     'use strict';
 
@@ -121,6 +122,7 @@ function back() {
 
 //prompts user for a name
 function userName() {
+    'use strict';
     user = prompt('please enter your name');
 
     if (user === '') {
@@ -136,15 +138,76 @@ function userName() {
 
 //function to select heads
 function selectHead() {
-    userChoice = 'head';
+    'use strict';
+    //0 represents heads in random number
+    //userChoice = 0;
+
+    showFlipButtonHead();
 }
 
 //function to select tails
 function selectTail() {
-    userChoice = 'tail';
+    'use strict';
+    //1 represents tail in random number
+    //userChoice = 1;
+
+    showFlipButtonTail();
 }
 
-//produces a number 0 for head and 1 for tails
-function flipCoin(userChoice) {
+//produces a number between 1 and zro and animates a coin
+function flipCoin() {
+    'use strict';
+    heads = 0;
+    tails = 0;
 
+
+
+    //random number between 1 and zero
+    side = Math.round(Math.random());
+
+    //represents head
+    if (side === 0) {
+
+        showHeadAnimation();
+
+    } else {
+
+
+        showTailAnimation();
+    }
+}
+
+function showFlipButtonHead() {
+    //display flip menu
+    flipMenu.style.display = 'block';
+    h2Element.innerHTML = 'You Chose Heads!';
+    //display choice
+    flipMenu.appendChild(h2Element);
+}
+
+function showFlipButtonTail() {
+
+    //display flip menu
+    flipMenu.style.display = 'block';
+    h2Element.innerHTML = 'You Chose Tails!';
+    //display choice
+    flipMenu.appendChild(h2Element);
+}
+
+function showHeadAnimation() {
+    text[0] = '<img class="animate-coin" src="img/head-coin.png"/>';
+    coinAnimation.innerHTML = text[0];
+
+    heads += 1;
+    results.innerHTML = 'You got Heads';
+    headsCount.innerHTML = '<h1> Number of heads: ' + heads + '</h1>';
+}
+
+function showTailAnimation() {
+    text[1] = '<img class="animate-coin" src="img/tail-coin.png"/>';
+    coinAnimation.innerHTML = text[1];
+
+    tails += 1;
+    results.innerHTML = '<h3>You got Tails!</h3>';
+    tailsCount.innerHTML = '<h1> Number of heads: ' + heads + '</h1>';
 }
