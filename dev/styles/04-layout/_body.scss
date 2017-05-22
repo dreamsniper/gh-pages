@@ -62,7 +62,7 @@ body {
         display: none;
         text-align: center;
         background-color: $grassGreen;
-        margin: 1em auto;
+        margin: 0 auto;
         padding: 1rem;
         #flip-button {
             text-align: center;
@@ -75,12 +75,20 @@ body {
             border: 2px solid $rationale;
             cursor: pointer;
         }
+        .head-count {
+            h1 {
+                color: $rationale;
+            }
+        }
+        .tail-count {
+            h1 {
+                color: $rationale;
+            }
+        }
     }
     .results {
         display: block;
         margin: 1em auto;
         background-color: #000000;
     }
-    #head-count {}
-    #tail-count {}
 }
