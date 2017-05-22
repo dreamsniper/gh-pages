@@ -49,8 +49,8 @@
         img {
             display: block;
             margin: auto;
-            width: 40%;
-            height: 40%;
+            width: 35%;
+            height: 35%;
         }
     }
     h1 {
@@ -85,6 +85,18 @@
             margin: 0 auto;
             width: 35%;
             height: 35%;
+        }
+    }
+    .coin-animation {
+        background-color: #000000;
+        border-radius: 3em;
+        margin: 1rem;
+        img {
+            display: block;
+            margin: .5rem auto;
+            padding: .5rem;
+            width: 40%;
+            height: 40%;
         }
     }
 }
