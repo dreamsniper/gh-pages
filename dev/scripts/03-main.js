@@ -62,3 +62,5 @@ coinAnimation = document.getElementsByClassName('coin-animation')[0];
 results = document.getElementsByClassName('results')[0];
 text = [];
 h2Element = document.createElement('h2');
+headsCount = document.getElementById('heads-count');
+tailsCount = document.getElementById('tails-count');
