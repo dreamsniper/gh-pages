@@ -118,6 +118,7 @@ function back() {
     welcomeScreen.style.display = 'block';
     gameScreen.style.display = 'none';
     endScreen.style.display = 'none';
+    reset();
 }
 
 //prompts user for a name
@@ -139,28 +140,28 @@ function userName() {
 //function to select heads
 function selectHead() {
     'use strict';
-    //0 represents heads in random number
-    //userChoice = 0;
 
-    showFlipButtonHead();
+    //display flip menu
+    flipMenu.style.display = 'block';
+    h2Element.innerHTML = 'You Chose Heads!';
+    //display choice
+    flipMenu.appendChild(h2Element);
 }
 
 //function to select tails
 function selectTail() {
     'use strict';
-    //1 represents tail in random number
-    //userChoice = 1;
 
-    showFlipButtonTail();
+    //display flip menu
+    flipMenu.style.display = 'block';
+    h2Element.innerHTML = 'You Chose Tails!';
+    //display choice
+    flipMenu.appendChild(h2Element);
 }
 
 //produces a number between 1 and zro and animates a coin
 function flipCoin() {
     'use strict';
-    heads = 0;
-    tails = 0;
-
-
 
     //random number between 1 and zero
     side = Math.round(Math.random());
@@ -177,37 +178,26 @@ function flipCoin() {
     }
 }
 
-function showFlipButtonHead() {
-    //display flip menu
-    flipMenu.style.display = 'block';
-    h2Element.innerHTML = 'You Chose Heads!';
-    //display choice
-    flipMenu.appendChild(h2Element);
-}
-
-function showFlipButtonTail() {
-
-    //display flip menu
-    flipMenu.style.display = 'block';
-    h2Element.innerHTML = 'You Chose Tails!';
-    //display choice
-    flipMenu.appendChild(h2Element);
-}
-
 function showHeadAnimation() {
-    text[0] = '<img class="animate-coin" src="img/head-coin.png"/>';
+    text[0] = '<img class="animated flip" src="img/head-coin.png"/>';
     coinAnimation.innerHTML = text[0];
 
     heads += 1;
-    results.innerHTML = 'You got Heads';
+    results.innerHTML = '<h3>You got Heads</h3>';
     headsCount.innerHTML = '<h1> Number of heads: ' + heads + '</h1>';
 }
 
 function showTailAnimation() {
-    text[1] = '<img class="animate-coin" src="img/tail-coin.png"/>';
+    text[1] = '<img class="animated flip" src="img/tail-coin.png"/>';
     coinAnimation.innerHTML = text[1];
 
     tails += 1;
     results.innerHTML = '<h3>You got Tails!</h3>';
-    tailsCount.innerHTML = '<h1> Number of heads: ' + heads + '</h1>';
+    tailsCount.innerHTML = '<h1> Number of Tails: ' + tails + '</h1>';
+}
+
+//Function to reset
+function reset() {
+    heads = 0;
+    tails = 0;
 }
