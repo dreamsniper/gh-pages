@@ -175,7 +175,7 @@ function userName() {
         } while (user === '');
 
     } else {
-        userNamePrompt.innerHTML = '<h1>Lets Play ' + user + ' Good Luck!!</h1>';
+        userNamePrompt.innerHTML = '<h1>Lets Play ' + user + ', Good Luck!!</h1>';
     }
 }
 
