@@ -142,7 +142,7 @@ body .flip-menu {
   display: none;
   text-align: center;
   background-color: #A9DA88;
-  margin: 1em auto;
+  margin: 0 auto;
   padding: 1rem;
 }
 
@@ -156,6 +156,14 @@ body .flip-menu #flip-button {
   border-radius: 3em;
   border: 2px solid #FE8B05;
   cursor: pointer;
+}
+
+body .flip-menu .head-count h1 {
+  color: #FE8B05;
+}
+
+body .flip-menu .tail-count h1 {
+  color: #FE8B05;
 }
 
 body .results {
