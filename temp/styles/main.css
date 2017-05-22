@@ -66,6 +66,7 @@ h2 {
 h3 {
   text-align: center;
   color: #fff;
+  padding: .5em;
   font-size: 32px;
   margin: 10px;
   font-family: 'Ranchers', cursive;
@@ -107,7 +108,8 @@ body .try-again {
 }
 
 body .buttons {
-  clear: both;
+  display: inline-block;
+  width: 100%;
 }
 
 body .buttons #head-button {
@@ -159,7 +161,7 @@ body .flip-menu #flip-button {
 body .results {
   display: block;
   margin: 1em auto;
-  background-color: aqua;
+  background-color: #000000;
 }
 
 nav {
@@ -268,8 +270,8 @@ nav ul li:hover ul li:hover {
 .welcome-screen #coin img {
   display: block;
   margin: auto;
-  width: 40%;
-  height: 40%;
+  width: 35%;
+  height: 35%;
 }
 
 .welcome-screen h1 {
@@ -308,6 +310,20 @@ nav ul li:hover ul li:hover {
   margin: 0 auto;
   width: 35%;
   height: 35%;
+}
+
+.game-screen .coin-animation {
+  background-color: #000000;
+  border-radius: 3em;
+  margin: 1rem;
+}
+
+.game-screen .coin-animation img {
+  display: block;
+  margin: .5rem auto;
+  padding: .5rem;
+  width: 40%;
+  height: 40%;
 }
 
 .end-screen {
